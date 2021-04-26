@@ -27,7 +27,7 @@ jobs:
     - name: Test with Maven
       run: mvn test
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
       env:
         SONAR_TOKEN: c18e33045b24bcecb38298aba0e5b5caded5e02c
+      run: mvn org.sonarsource.scanner.maven:sonar
     
