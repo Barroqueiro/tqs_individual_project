@@ -15,6 +15,9 @@
 	<description>Indifidual project for the class of tqs</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>Barroqueiro_tqs_individual_project</sonar.projectKey>
+  		<sonar.organization>barroqueiro</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
