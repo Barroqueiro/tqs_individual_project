@@ -1,0 +1,111 @@
+<html>
+<head>
+  <title th:text="'Air quality for ' + ${AirQuality.city_name}"></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="sample">&nbsp;</div>
+    <div class="container">
+			<table class="table">
+			 	 <thead class="thead-dark">
+			    	<tr style="background-color:#BEBEBE">
+			      		<th colspan="2" style="text-align:center;" scope="row" >City Details</th>
+			   	 	</tr>
+			 	 </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">City</th>
+				      <td th:text=${AirQuality.city_name}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Country</th>
+				      <td th:text=${AirQuality.country_code}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">State code</th>
+				      <td th:text=${AirQuality.state_code}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Air Quality</th>
+				      <td th:text=${AirQuality.aqi}></td>
+				    </tr>
+				  </tbody>
+			</table>
+	</div>
+	<div class="sample">&nbsp;</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <table class="table">
+			 	 <thead class="thead-dark">
+			    	<tr  style="background-color:#BEBEBE">
+			      		<th colspan="2" style="text-align:center;" scope="row" >Air Quality Details</th>
+			   	 	</tr>
+			 	 </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">o3</th>
+				      <td th:text=${AirQuality.o3}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">so2</th>
+				      <td th:text=${AirQuality.so2}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">no2</th>
+				      <td th:text=${AirQuality.no2}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">co</th>
+				      <td th:text=${AirQuality.co}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">pm10</th>
+				      <td th:text=${AirQuality.pm10}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">pm25</th>
+				      <td th:text=${AirQuality.pm25}></td>
+				    </tr>
+				  </tbody>
+				</table>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <table class="table">
+			 	 <thead class="thead-dark">
+			    	<tr style="background-color:#BEBEBE">
+			      		<th colspan="2" style="text-align:center;" scope="row" >Pollen Details</th>
+			   	 	</tr>
+			 	 </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">Pollen level tree</th>
+				      <td th:text=${Pollen.pollen_level_tree}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Pollen level grass</th>
+				      <td th:text=${Pollen.pollen_level_grass}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Pollen level weed</th>
+				      <td th:text=${Pollen.pollen_level_weed}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Mold level</th>
+				      <td th:text=${Pollen.mold_level}></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Predominant pollen type</th>
+				      <td th:text=${Pollen.predominant_pollen_type}></td>
+				    </tr>
+				  </tbody>
+				</table>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
