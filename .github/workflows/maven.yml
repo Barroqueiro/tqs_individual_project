@@ -26,5 +26,5 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test with Maven
       run: mvn test
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@v1.6
+    - name: Codacy Analysis CLI
+      uses: codacy/codacy-analysis-cli-action@3.0.0
