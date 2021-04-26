@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class AirQualityController {
 	
-	@Value("${api.key}")
-    private String apiKey;
+    private String apiKey = "cc40fc238be447e5864ee3dc3781908a";
 	
 	@Autowired
 	private AirQualityService airQualityService;

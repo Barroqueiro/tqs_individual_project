@@ -16,8 +16,7 @@ import com.google.gson.JsonObject;
 @Service
 public class AirQualityService {
 
-	@Value("${api.key}")
-    private String apiKey;
+    private String apiKey = "cc40fc238be447e5864ee3dc3781908a";
 	
 	@Autowired
 	private CacheService cacheService;
