@@ -28,5 +28,7 @@ jobs:
       run: mvn test
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.6
+      env:
+        SONAR_TOKEN: c18e33045b24bcecb38298aba0e5b5caded5e02c
 
     
