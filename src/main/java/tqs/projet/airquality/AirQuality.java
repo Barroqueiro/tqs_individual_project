@@ -2,7 +2,9 @@ package tqs.projet.airquality;
 
 public class AirQuality {
 	
-	public AirQuality() {}
+	public AirQuality() {
+
+	}
 
 	public AirQuality(String location, String country, String state, double lat, double lon, int aqi, int o3, int so2,
 			int no2, int co, int pm10, int pm25) {

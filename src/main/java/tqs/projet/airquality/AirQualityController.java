@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class AirQualityController {
 	
-    private String apiKey = "cc40fc238be447e5864ee3dc3781908a";
-	
-	@Autowired
+    @Autowired
 	private AirQualityService airQualityService;
 	
 	Logger logger = LoggerFactory.getLogger(AirQualityController.class);
