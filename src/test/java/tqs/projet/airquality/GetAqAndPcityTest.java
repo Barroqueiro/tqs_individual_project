@@ -31,10 +31,10 @@ public class GetAqAndPcityTest {
   public void tearDown() {
     driver.quit();
   }
+  
   @Test
   public void getAqAndPcity() {
     driver.get("http://localhost:8080/");
-    driver.manage().window().setSize(new Dimension(554, 700));
     driver.findElement(By.id("input_city")).click();
     driver.findElement(By.id("input_city")).sendKeys("Aveiro");
     driver.findElement(By.id("redirect")).click();
