@@ -28,10 +28,10 @@ public class GetNonExistantCityTest {
   
   @Test
   public void getNonExistantCity() {
-    driver.get("http://localhost:8080/");
-    driver.findElement(By.id("input_city")).click();
-    driver.findElement(By.id("input_city")).sendKeys("NonExistantCity");
-    driver.findElement(By.id("redirect")).click();
-    assertThat(driver.getTitle(), is("404 HTML Template by Colorlib"));
+	    driver.get("http://localhost:8080/");
+	    driver.findElement(By.xpath("//input")).click();
+	    driver.findElement(By.xpath("//input")).sendKeys("NonExistantCity");
+	    driver.findElement(By.xpath("//button")).click();
+	    assertThat(driver.getTitle(), is("404 HTML Template by Colorlib"));
   }
 }

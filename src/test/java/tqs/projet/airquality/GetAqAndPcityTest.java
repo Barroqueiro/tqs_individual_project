@@ -31,12 +31,12 @@ public class GetAqAndPcityTest {
   
   @Test
   public void getAqAndPcity() {
-    driver.get("http://localhost:8080/");
-    driver.findElement(By.id("input_city")).click();
-    driver.findElement(By.id("input_city")).sendKeys("Aveiro");
-    driver.findElement(By.id("redirect")).click();
-    assertThat(driver.findElement(By.cssSelector(".container > .table tr:nth-child(1) > td")).getText(), is("Aveiro"));
-    assertThat(driver.findElement(By.cssSelector(".container > .table tr:nth-child(2) > td")).getText(), is("PT"));
-    assertThat(driver.getTitle(), is("Air quality for Aveiro"));
+	    driver.get("http://localhost:8080/");
+	    driver.findElement(By.xpath("//input")).click();
+	    driver.findElement(By.xpath("//input")).sendKeys("Aveiro");
+	    driver.findElement(By.xpath("//button")).click();
+	    assertThat(driver.findElement(By.xpath("//td[contains(.,\'Aveiro\')]")).getText(), is("Aveiro"));
+	    assertThat(driver.findElement(By.xpath("//td[contains(.,\'PT\')]")).getText(), is("PT"));
+	    assertThat(driver.getTitle(), is("Air quality for Aveiro"));
   }
 }
