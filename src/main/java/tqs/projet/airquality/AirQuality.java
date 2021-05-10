@@ -135,51 +135,5 @@ public class AirQuality {
 		result = prime * result + ((state_code == null) ? 0 : state_code.hashCode());
 		return result;
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		AirQuality other = (AirQuality) obj;
-		if (aqi != other.aqi)
-			return false;
-		if (city_name == null) {
-			if (other.city_name != null)
-				return false;
-		} else if (!city_name.equals(other.city_name))
-			return false;
-		if (co != other.co)
-			return false;
-		if (country_code == null) {
-			if (other.country_code != null)
-				return false;
-		} else if (!country_code.equals(other.country_code))
-			return false;
-		if (Double.doubleToLongBits(lat) != Double.doubleToLongBits(other.lat))
-			return false;
-		if (Double.doubleToLongBits(lon) != Double.doubleToLongBits(other.lon))
-			return false;
-		if (no2 != other.no2)
-			return false;
-		if (o3 != other.o3)
-			return false;
-		if (pm10 != other.pm10)
-			return false;
-		if (pm25 != other.pm25)
-			return false;
-		if (so2 != other.so2)
-			return false;
-		if (state_code == null) {
-			if (other.state_code != null)
-				return false;
-		} else if (!state_code.equals(other.state_code))
-			return false;
-		return true;
-	}
-	
 	
 }

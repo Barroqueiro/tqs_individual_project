@@ -24,7 +24,7 @@ public class AirQualityServiceTests {
 	private String jsonResponse = "{\"data\":[{\"mold_level\":1,\"aqi\":82,\"pm10\":3.7231,\"co\":325.859,\"o3\":145.555,\"predominant_pollen_type\":\"Molds\",\"so2\":1.39698,\"pollen_level_tree\":1,\"pollen_level_weed\":1,\"no2\":1.0322,\"pm25\":2.19588,\"pollen_level_grass\":1}],\"city_name\":\"Aveiro\",\"lon\":\"-8.64554\",\"timezone\":\"Europe Lisbon\",\"lat\":\"40.64427\",\"country_code\":\"PT\",\"state_code\":\"02\"}";
 	
     @Test
-    public void whenValidLocation_ReturnValidAirQuality() {
+    public void whenValidLocationReturnValidAirQuality() {
     	AirQuality aq = new AirQuality("Aveiro","PT","02",40.64427,-8.64554,82,145,1,1,325,3,2);
     	
         String location = "Aveiro";
@@ -38,7 +38,7 @@ public class AirQualityServiceTests {
     }
     
     @Test
-    public void whenInvalidLocation_ReturnPollen() {
+    public void whenInvalidLocationReturnPollen() {
     	Pollen p = new Pollen("Aveiro","PT","02",40.64427,-8.64554,1,1,1,1,"Molds");
     	
         String location = "Aveiro";
@@ -52,7 +52,7 @@ public class AirQualityServiceTests {
     }
     
     @Test
-    public void whenInvalidLocation_ReturnAirQualityEmpty() {
+    public void whenInvalidLocationReturnAirQualityEmpty() {
     	AirQuality aq = new AirQuality();
     	
         String location = "SomeCityThatDoesntExist";
@@ -66,7 +66,7 @@ public class AirQualityServiceTests {
     }
     
     @Test
-    public void whenInvalidLocation_ReturnPollenEmpty() {
+    public void whenInvalidLocationReturnPollenEmpty() {
     	Pollen p = new Pollen();
     	
         String location = "SomeCityThatDoesntExist";

@@ -2,12 +2,12 @@ package tqs.projet.airquality;
 
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat; 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
 
 public class CacheMetricsTests {
 
 	@Test
-	public void test_counts() {
+	public void testCounts() {
 		CacheMetrics cm = new CacheMetrics();
 		cm.addCount();
 		cm.addCount();
@@ -16,7 +16,7 @@ public class CacheMetricsTests {
 	}
 	
 	@Test
-	public void test_hits() {
+	public void testHits() {
 		CacheMetrics cm = new CacheMetrics();
 		cm.addHit();
 		cm.addHit();
@@ -24,7 +24,7 @@ public class CacheMetricsTests {
 	}
 	
 	@Test
-	public void test_misses() {
+	public void testMisses() {
 		CacheMetrics cm = new CacheMetrics();
 		cm.addMiss();
 		cm.addMiss();

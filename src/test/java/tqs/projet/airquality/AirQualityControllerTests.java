@@ -22,7 +22,7 @@ public class AirQualityControllerTests {
     private AirQualityService service;
     
     @Test
-    public void whenGetAirQualityCityExists_theReturnIt( ) throws Exception {
+    public void whenGetAirQualityCityExistsThenReturnIt( ) throws Exception {
     	AirQuality aq = new AirQuality("Aveiro","PT","02",40.64427,-8.64554,82,145,1,1,325,3,2);
 
         when( service.getAirQuality(any()) ).thenReturn(aq);
@@ -36,7 +36,7 @@ public class AirQualityControllerTests {
     }
     
     @Test
-    public void whenGetPollenCityExists_theReturnIt( ) throws Exception {
+    public void whenGetPollenCityExistsThenReturnIt( ) throws Exception {
     	Pollen p = new Pollen("Aveiro","PT","02",40.64427,-8.64554,1,1,1,1,"Molds");
 
         when( service.getPollen(any()) ).thenReturn(p);
@@ -50,7 +50,7 @@ public class AirQualityControllerTests {
     }
     
     @Test
-    public void whenGetPollenCityNoExists_theReturn404( ) throws Exception {
+    public void whenGetPollenCityNoExistsThenReturn404( ) throws Exception {
     	Pollen p = new Pollen();
 
         when( service.getPollen(any()) ).thenReturn(p);
@@ -63,7 +63,7 @@ public class AirQualityControllerTests {
     }
     
     @Test
-    public void whenGetAirQualityCityNoExists_theReturn404( ) throws Exception {
+    public void whenGetAirQualityCityNoExistsThenReturn404( ) throws Exception {
     	AirQuality aq = new AirQuality();
 
         when( service.getAirQuality(any()) ).thenReturn(aq);
@@ -76,7 +76,7 @@ public class AirQualityControllerTests {
     }
     
     @Test
-    public void whenGetLocationPage_theReturnPage( ) throws Exception {
+    public void whenGetLocationPageThenReturnPage( ) throws Exception {
     	 AirQuality aq = new AirQuality("Aveiro","PT","02",40.64427,-8.64554,82,145,1,1,325,3,2);
     	 Pollen p = new Pollen("Aveiro","PT","02",40.64427,-8.64554,1,1,1,1,"Molds");
     	 

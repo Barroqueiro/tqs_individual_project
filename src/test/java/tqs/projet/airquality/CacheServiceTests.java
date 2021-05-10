@@ -2,32 +2,31 @@ package tqs.projet.airquality;
 
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat; 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.is;
 
 import java.time.LocalDateTime;
 
 public class CacheServiceTests {
 
 	@Test
-	public void whenNoCache_returnNull() {
+	public void whenNoCacheReturnNull() {
 		CacheService cs = new CacheService();
 		assertThat(cs.getObjectCached("SomeString"), is((String) null));
 	}
 	
 	@Test
-	public void whenCache_returnCachedValue() {
+	public void whenCacheReturnCachedValue() {
 		CacheService cs = new CacheService();
 		cs.putObjectCached("Some String", "Some value");
 		assertThat(cs.getObjectCached("Some String"), is("Some value"));
 	}
 	
 	@Test
-	public void whenTimeRunsOut_returnReturnNull() {
+	public void whenTimeRunsOutReturnReturnNull() {
 		CacheService cs = new CacheService(2);
 		cs.putObjectCached("Some String", "Some value");
 		LocalDateTime time_after = LocalDateTime.now().plusSeconds(2);
 		while (LocalDateTime.now().isBefore(time_after)){
-			continue;
 		}
 		assertThat(cs.getObjectCached("Some String"), is((String) null));
 	}
