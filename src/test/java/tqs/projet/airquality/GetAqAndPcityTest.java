@@ -10,11 +10,17 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import io.github.bonigarcia.seljup.DockerBrowser;
 import io.github.bonigarcia.seljup.SeleniumJupiter;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+
+import static io.github.bonigarcia.seljup.BrowserType.OPERA;
 
 @ExtendWith(SeleniumJupiter.class)
 public class GetAqAndPcityTest {
@@ -22,7 +28,7 @@ public class GetAqAndPcityTest {
   private WebDriver driver;
   JavascriptExecutor js;
   
-  public GetAqAndPcityTest(FirefoxDriver driver) {
+  public GetAqAndPcityTest(PhantomJSDriver driver) {
 	  this.driver = driver;
 	  js = driver;
   }
