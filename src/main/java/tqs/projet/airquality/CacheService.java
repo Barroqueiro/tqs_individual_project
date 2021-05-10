@@ -9,7 +9,7 @@ public class CacheService {
 	
 	private TTLMap<String,String> t;
 	private CacheMetrics cm;
-	Logger logger = LoggerFactory.getLogger(AirQualityController.class);
+	private Logger logger = LoggerFactory.getLogger(AirQualityController.class);
 	
 	public CacheService() {
 		t = new TTLMap<String,String>(2*60);

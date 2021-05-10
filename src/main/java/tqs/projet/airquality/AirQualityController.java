@@ -16,7 +16,7 @@ public class AirQualityController {
     @Autowired
 	private AirQualityService airQualityService;
 	
-	Logger logger = LoggerFactory.getLogger(AirQualityController.class);
+	private Logger logger = LoggerFactory.getLogger(AirQualityController.class);
 	
 	@GetMapping("/api/air_quality/{location}")
 	public ResponseEntity<AirQuality> getAirQuality(@PathVariable String location) {

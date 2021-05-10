@@ -16,11 +16,9 @@ import org.openqa.selenium.JavascriptExecutor;
 public class GetNonExistantCityTest {
   private WebDriver driver;
 
-  JavascriptExecutor js;
   
   public GetNonExistantCityTest(PhantomJSDriver driver) {
 	  this.driver = driver;
-	  js = driver;
   }
   @AfterEach
   public void tearDown() {

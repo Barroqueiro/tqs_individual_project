@@ -22,7 +22,7 @@ public class AirQualityService {
 	
 	private RestTemplate restTemplate;
 	
-	Logger logger = LoggerFactory.getLogger(AirQualityController.class);
+	private Logger logger = LoggerFactory.getLogger(AirQualityController.class);
 	
 	public AirQuality getAirQuality(String location) {
 		String str_res = (String) cacheService.getObjectCached(location);

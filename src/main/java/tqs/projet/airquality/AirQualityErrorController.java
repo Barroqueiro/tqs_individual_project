@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AirQualityErrorController implements ErrorController  {
 	
-	Logger logger = LoggerFactory.getLogger(AirQualityController.class);
+	private Logger logger = LoggerFactory.getLogger(AirQualityController.class);
 
     @RequestMapping("/error")
     public String handleError() {

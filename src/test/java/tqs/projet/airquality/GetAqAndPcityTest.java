@@ -17,7 +17,7 @@ import org.openqa.selenium.JavascriptExecutor;
 public class GetAqAndPcityTest {
 	
   private WebDriver driver;
-  JavascriptExecutor js;
+  private JavascriptExecutor js;
   
   public GetAqAndPcityTest(PhantomJSDriver driver) {
 	  this.driver = driver;
