@@ -1,17 +1,23 @@
 package tqs.projet.airquality;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import io.github.bonigarcia.seljup.SeleniumJupiter;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -22,9 +28,18 @@ public class GetAqAndPcityTest {
   private WebDriver driver;
   private JavascriptExecutor js;
   
-  public GetAqAndPcityTest(ChromeDriver driver) {
-	  this.driver = driver;
-	  js = driver;
+  @BeforeEach
+  public void setUp()
+  {
+      WebDriverManager.chromedriver().setup();
+      ChromeOptions options = new ChromeOptions();
+      options.addArguments("--no-sandbox");
+      options.addArguments("--disable-dev-shm-usage");
+      options.addArguments("--headless");
+      driver = new ChromeDriver(options);
+      driver.navigate().to("https://the-internet.herokuapp.com/login");
+      driver.manage().window().maximize();
+      driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
   }
   
   @AfterEach
