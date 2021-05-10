@@ -2,6 +2,19 @@ package tqs.projet.airquality;
 
 public class AirQuality {
 	
+	private String city_name;
+	private String country_code;
+	private String state_code;
+	private double lat;
+	private double lon;
+	private int aqi;
+	private int o3;
+	private int so2;
+	private int no2;
+	private int co;
+	private int pm10;
+	private int pm25;
+	
 	public AirQuality() {
 
 	}
@@ -22,19 +35,6 @@ public class AirQuality {
 		this.pm10 = pm10;
 		this.pm25 = pm25;
 	}
-	
-	private String city_name;
-	private String country_code;
-	private String state_code;
-	private double lat;
-	private double lon;
-	private int aqi;
-	private int o3;
-	private int so2;
-	private int no2;
-	private int co;
-	private int pm10;
-	private int pm25;
 	
 	public String getCity_name() {
 		return city_name;

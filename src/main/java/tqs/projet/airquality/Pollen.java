@@ -2,6 +2,17 @@ package tqs.projet.airquality;
 
 public class Pollen {
 	
+	private String city_name;
+	private String country_code;
+	private String state_code;
+	private double lat;
+	private double lon;
+	private int pollen_level_tree;
+	private int pollen_level_grass;
+	private int pollen_level_weed;
+	private int mold_level;
+	private String predominant_pollen_type;
+	
 	public Pollen() {}
 
 	public Pollen(String city_name, String country_code, String state_code, double lat, double lon,
@@ -19,17 +30,6 @@ public class Pollen {
 		this.mold_level = mold_level;
 		this.predominant_pollen_type = predominant_pollen_type;
 	}
-	
-	private String city_name;
-	private String country_code;
-	private String state_code;
-	private double lat;
-	private double lon;
-	private int pollen_level_tree;
-	private int pollen_level_grass;
-	private int pollen_level_weed;
-	private int mold_level;
-	private String predominant_pollen_type;
 	
 	public String getCity_name() {
 		return city_name;
